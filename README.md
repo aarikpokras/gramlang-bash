@@ -6,6 +6,12 @@ A grammatically-typed coding language written in bash.
 @@ This is a comment
 ```
 ```
+evaluate 2*8
+evaluate 1+9
+evaluate 2-9
+evaluate 1/3
+```
+```
 say Reading a file:
 ```
 ```
