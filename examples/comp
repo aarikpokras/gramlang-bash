@@ -1,0 +1,11 @@
+@@ User input is saved to gram.out
+@@ This is a comment
+say Reading example.txt:
+read examples/example.txt
+user input with prompt What's your name? 
+say without new line Machine architecture is: 
+get machine architecture
+say without new line Machine hardware is: 
+get machine hardware name
+say Sleeping for 5 seconds...
+pause for 5 seconds
