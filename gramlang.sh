@@ -6,6 +6,13 @@ else
     while IFS= read -r -u 3 i; do
       if [[ "$i" =~ "say without new line" ]]; then
         printf "$i" | sed 's/say without new line //'
+      elif [[ "$i" =~ "evaluate" ]]; then
+        expression=$(echo $i | sed 's/evaluate //')
+        if [ "$(echo $((expression)) >& /dev/null;echo $?)" -eq 0 ]; then
+          echo $((expression))
+        else
+          echo gramlang: evaluate: syntax error
+        fi
       elif [[ "$i" == "@@"* ]]; then
         :
       elif [[ "$i" =~ "pause for" ]]; then
@@ -23,7 +30,6 @@ else
         else
           echo gramlang: read: no such file $(echo $i | sed 's/read //')
         fi
-# Make variable setter.
       elif [[ "$i" =~ "user input" ]]; then
         if [[ "$(echo $i | sed 's/user input //')" =~ "with prompt" ]]; then
           printf "$(echo $i | sed 's/user input with prompt //')"
