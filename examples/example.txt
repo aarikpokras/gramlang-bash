@@ -1,0 +1,2 @@
+Hi there!
+This file is read with gramlang's `read` feature!
