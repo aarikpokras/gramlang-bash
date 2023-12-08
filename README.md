@@ -36,7 +36,7 @@ Get the machine's hardware name:
 ```
 get machine hardware name
 ```
-Sleep
+Sleep:
 ```
 pause for 5 seconds
 ```
