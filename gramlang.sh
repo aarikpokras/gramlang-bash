@@ -30,14 +30,10 @@ else
         else
           echo gramlang: read: no such file $(echo $i | sed 's/read //')
         fi
-      elif [[ "$i" =~ "user input" ]]; then
-        if [[ "$(echo $i | sed 's/user input //')" =~ "with prompt" ]]; then
-          printf "$(echo $i | sed 's/user input with prompt //')"
-          read -r var1
-          echo $var1 >> gram.out
-        else
-          echo gramlang: user input: invalid syntax. Please include \'with prompt\'.
-        fi
+      elif [[ "$i" =~ "ask" ]]; then
+        printf "$(echo $i | sed 's/ask //')"
+        read -r var1
+        echo $var1 >> gram.out
       fi
     done 3< "$1"
   else

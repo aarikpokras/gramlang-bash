@@ -2,7 +2,7 @@
 @@ This is a comment
 say Reading example.txt:
 read examples/example.txt
-user input with prompt What's your name? 
+ask What's your name? 
 say without new line Machine architecture is: 
 get machine architecture
 say without new line Machine hardware is: 
