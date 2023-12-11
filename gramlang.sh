@@ -4,6 +4,7 @@ if [ -z "$1" ]; then
 else
   if [ -f "$1" ]; then
     while IFS= read -r -u 3 i; do
+      # Parsing
       if [[ "$i" =~ "say without new line" ]]; then
         printf "$i" | sed 's/say without new line //'
       elif [[ "$i" =~ "evaluate" ]]; then
