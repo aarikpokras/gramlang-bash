@@ -1,4 +1,4 @@
-# Grammatically Correct English Language
+# Grammatical English Language
 A grammatically-typed coding language written in bash. 
 
 ## List of functions
